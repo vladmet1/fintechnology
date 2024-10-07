@@ -6,38 +6,39 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "AddElementToArray",
+				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "constructor"
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "DeleteArraysElementByIndex",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "CurrentAmount",
+				"name": "GetArrayLength",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "Deposit",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "Owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -46,31 +47,58 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "recipient",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "TransferAmount",
+						"name": "",
 						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "isEther",
-						"type": "bool"
 					}
 				],
-				"name": "TransferToAccount",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "MyArray",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "Withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "MyArray2",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "MyFixedLengthArray",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -87,7 +115,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"first_contract.sol": "Test"
+			"array_matrix.sol": "Test"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -101,12 +129,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"first_contract.sol": {
-			"keccak256": "0xe0647617b3dbb0f616c16e7065456e13dc7bc6240ce5bc410896cbc64d997fb1",
+		"array_matrix.sol": {
+			"keccak256": "0xf028672fc55257edc0c5aae5ae4ea1594055d00c5a25c0c56389c9b3f9665e25",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://92c5ca492926f768e2d81e342b1967f201d5dfec93fc9239cd020cffe5a9f312",
-				"dweb:/ipfs/QmUX6NJJu651cb8DKdydZuLxDE1Rog3FteRGtePSJvassZ"
+				"bzz-raw://25fb701932593928317572aa067c624fbe5626a0c36a11ce3c27877ff2271399",
+				"dweb:/ipfs/QmXiZz3LQ8hJK7fHStdLqNuhbgYgt6MGxHympHPJyn6Uzw"
 			]
 		}
 	},
