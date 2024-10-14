@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "Foo",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"3 занятие/primer.sol": "OwnersInfo"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"3 занятие/primer.sol": {
+			"keccak256": "0x1ccab920d3e3d9806e5afe576487eb5ddf093bdd4497fb941a71b092562cf099",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e5d64fe0fc1b19c53305c2cdf80180a533ded48bd6d73236d63d921942231dd",
+				"dweb:/ipfs/QmQUuo4ZjHojZXFZcFW1U9ETSoMfasKQbHDpqoHaysy5CU"
+			]
+		}
+	},
+	"version": 1
+}
