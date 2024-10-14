@@ -106,7 +106,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"3 занятие/classes.sol": "SquareInfo"
+			"3 занятие/classes2.sol": "SquareInfo"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -120,12 +120,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"3 занятие/classes.sol": {
-			"keccak256": "0xd4d23efc0de17530c421ade6529abd7b3d9eb3c8cdb9e0df1f92dfd77a530cbf",
+		"3 занятие/classes2.sol": {
+			"keccak256": "0xd53bc33134307683a5265f593daa6f763dd61782865861dcd1231d07d7bb8e4c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d51e13a9c8019ecac92ea683ac16ad2467735f27a9094ede72789b248cd3cee7",
-				"dweb:/ipfs/Qmbdwoy2hjaULFsvm3qhSsX7irKoJKzyHksV4Qcn8QkTaz"
+				"bzz-raw://3f683eaa2d591e25ee53d74e2272d473817bf1e93855d55b69178bec554e64b9",
+				"dweb:/ipfs/QmZTz3ncqVvMDPuGjc7jx12gLQ1B2vZa9tjBriJCTy1xrb"
 			]
 		}
 	},
