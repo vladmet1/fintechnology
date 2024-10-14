@@ -2,42 +2,53 @@
 pragma solidity 0.8.26;
 
 contract Main{
-    function getMessage() public pure returns (string memory) {
+    function GetMessage() public pure returns (string memory) {
         return "Hello world!";
     }
 }
 
 contract RectangleInfo is Main{
-    uint private _area;
-    uint private _perimetr;
-    function getArea(uint width, uint length) public returns (uint) {
-        require(width > 0 && length > 0, "Error! Width and length > 0");
+    uint public _area;
+    uint public _perimetr;
+    function GetArea(uint width, uint length) public virtual returns (uint) {
+        require(width > 0 && length > 0, "Error! Width and length < 0");
         _area = width * length;
         return _area;
-    }
-    function getPerimetr(uint width, uint length) public returns (uint) {
-        require(width > 0 && length > 0, "Error! Width and length > 0");
+    }  
+    function GetPerimetr(uint width, uint length) public virtual returns (uint) { 
+        require(width > 0 && length > 0, "Error! Width and length < 0");
         _perimetr = 2 * (width + length);
         return _perimetr;
     }
 }
 
 contract CircleInfo is Main{
-    uint256 private _area;
-    uint256 private _perimetr;
-    // uint256 private pi = 3.14;
-    uint256 private constant pi = 3141592653589793238;
-    uint256 private constant scale = 10**18; 
-    function getArea(uint256 radius) public returns (uint256) {
-        require(radius > 0, "Error! Radius > 0");
-        // _area = pi * radius * radius;
-        _area = (pi * radius * radius) / scale;
+    uint public _area;
+    uint public _perimetr;
+    uint public constant pi = 3;
+    function GetArea(uint radius) public returns (uint) {
+        require(radius > 0, "Error! Radius < 0");
+        _area = (pi * radius * radius);
         return _area;
     }
-    function getPerimetr(uint256 radius) public returns (uint256) {
-        require(radius > 0, "Error! Radius > 0");
-        // _perimetr = 2 * pi * radius;
-        _perimetr = (2 * pi * radius) / scale;
+    function GetPerimetr(uint radius) public returns (uint) {
+        require(radius > 0, "Error! Radius < 0");
+        _perimetr = (2 * pi * radius);
+        return _perimetr;
+    }
+}
+
+contract SquareInfo is RectangleInfo{
+    function GetArea(uint width, uint length) public override returns (uint) {
+        require(width > 0 && length > 0, "Error! Width and length < 0");
+        require(width == length, "Error! Width != length");
+        _area = width * length;
+        return _area;
+    }  
+    function GetPerimetr(uint width, uint length) public override returns (uint) {
+        require(width > 0 && length > 0, "Error! Width and length < 0");
+        require(width == length, "Error! Width != length");
+        _perimetr = 2 * (width + length);
         return _perimetr;
     }
 }

@@ -18,7 +18,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "getArea",
+				"name": "GetArea",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -31,7 +31,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getMessage",
+				"name": "GetMessage",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -55,7 +55,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "getPerimetr",
+				"name": "GetPerimetr",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -64,6 +64,32 @@
 					}
 				],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_area",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_perimetr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -95,11 +121,11 @@
 	},
 	"sources": {
 		"3 занятие/classes.sol": {
-			"keccak256": "0x8143ced30653483df4c61ccd603fcd4e3b3274055531a727f39a00ad0fd1414c",
+			"keccak256": "0xd4d23efc0de17530c421ade6529abd7b3d9eb3c8cdb9e0df1f92dfd77a530cbf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1564e21daff14924c8a7084d67b6a9db720a08df036368ba1a1e1e30d83ad8d4",
-				"dweb:/ipfs/QmevZkMHmGneZh39Sgxy6rNX4A9CH5xAfZCHh36XNXj9k8"
+				"bzz-raw://d51e13a9c8019ecac92ea683ac16ad2467735f27a9094ede72789b248cd3cee7",
+				"dweb:/ipfs/Qmbdwoy2hjaULFsvm3qhSsX7irKoJKzyHksV4Qcn8QkTaz"
 			]
 		}
 	},
