@@ -9,8 +9,9 @@ contract ChemTechToken is IERC20 {
     
     uint256 private _totalSupply;
     string public name;
-    string public symbol = 'CTT';
+    string public symbol;
     uint public decimals;
+    address immutable OWNER;
 
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
@@ -20,9 +21,27 @@ contract ChemTechToken is IERC20 {
         symbol = _symbol;
         decimals = _decimals;
     }
+
+    function Mint(uint256 amount, address emissionCenter) public OnlyOwner{
+        BeforeTokensTransfer(address(0), emissionCenter, amount);
+        balanceOf[emissionCenter] += amount;
+        _totalSupply += amount;
+        emit transfer (address(0), emissionCenter, amount);
+    }
+
+    function Burn(address from, uint256 amount) public OnlyOwner{
+        BeforeTokensTransfer(from, address(0), amount);
+        balanceOf[from] -= amount;
+        _totalSupply -= amount;
+    }
     
-    function TotalSupply() external view returns (uint256){
+    function TotalSupply() external view returns(uint256){
         return _totalSupply;
+    }
+
+    modifier OnlyOwner(){
+        require(msg.sender == OWNER, "Not an owner!");
+        _;
     }
 
     function BalanceOf(address account) external view returns (uint256){
@@ -51,6 +70,12 @@ contract ChemTechToken is IERC20 {
         balanceOf[sender] -= amount;
         balanceOf[recipient] += amount;
         emit transfer(sender, recipient, amount);
+        return true;
+    }
+
+    function BeforeTokensTransfer(address from, address to, uint256 amount) internal virtual returns (bool){
+        require(balanceOf[from] >= amount, "Not enought tokens");
+        require(allowance[from][to] >= amount, "Not enough tokens on allowance nested map!");
         return true;
     }
 }

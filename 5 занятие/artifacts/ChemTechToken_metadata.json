@@ -144,6 +144,42 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "emissionCenter",
+						"type": "address"
+					}
+				],
+				"name": "Mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "TotalSupply",
 				"outputs": [
@@ -320,11 +356,11 @@
 	},
 	"sources": {
 		"5 занятие/ChemTechToken.sol": {
-			"keccak256": "0xb44c48d7810349bec7e848d176dd265278974005b0ba08d57e6da35a5fe31882",
+			"keccak256": "0xb15682fba1d99fee414b97214505834eb2016f5028d5902f30c5581a20a215b5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3968ad5ae7042bcb55e094170a172b8723e56aa80687c09dbcf6e49249681f06",
-				"dweb:/ipfs/QmS1Ebj5ZunecYYUA5gUz7QdyeiN46X1Snwhk2Ek5PaD6E"
+				"bzz-raw://3cd38d0751a87d5cf5676dfecba5df815df831e1cc1154767a97253631317505",
+				"dweb:/ipfs/QmPe5KKecbffEvzcZtST68YeukaFGKdmpGmny1jBrZjmyX"
 			]
 		},
 		"scripts/IERC20.sol": {
