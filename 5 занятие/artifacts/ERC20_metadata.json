@@ -44,11 +44,11 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "value",
 						"type": "uint256"
 					}
 				],
-				"name": "approval",
+				"name": "_approval",
 				"type": "event"
 			},
 			{
@@ -73,7 +73,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "transfer",
+				"name": "_transfer",
 				"type": "event"
 			},
 			{
@@ -144,39 +144,16 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "OWNER",
+				"outputs": [
 					{
 						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "Burn",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "emissionCenter",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "Mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -249,21 +226,28 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "from",
 						"type": "address"
 					},
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
 					}
 				],
-				"name": "allowance",
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "uint8",
 						"name": "",
-						"type": "uint256"
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -273,32 +257,18 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "to",
 						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
+					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "decimals",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -341,7 +311,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"5 занятие/ChemTechToken.sol": "ChemTechToken"
+			"5 занятие/ISUCTToken.sol": "ERC20"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -355,20 +325,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"5 занятие/ChemTechToken.sol": {
-			"keccak256": "0xfa0b02e52d9e66534b8c6ed3354eaeb983f7e94a54e6af3dc94a66c05d375a60",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://cfff5e0b484cb86934f282390d8fbef7967b3f94034913a5452ea133f3be9b7c",
-				"dweb:/ipfs/QmP1b1ZkD2616F3P2voUbjYv1gfpcrrtxe36ZHeAWx2eLF"
-			]
-		},
 		"5 занятие/IERC20.sol": {
 			"keccak256": "0x1ad02288eef1ab7ffc5b42ae82aee71e1d7887062dc17a70adc6cc732da4c9d7",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://825d24ebda7976b576e2bc3748d73b0e05e95f09bc73af090f26e9fd33bd5c22",
 				"dweb:/ipfs/QmZPhEbKTy4TgwhXFLbBSiFbb9q5mQHvFDcAzWaJCAUrDd"
+			]
+		},
+		"5 занятие/ISUCTToken.sol": {
+			"keccak256": "0xdbc4efe8e406daaa3f4f3657279dd0e59ea36adbd4caf9fb3e96d0418841a375",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ed204c62759119dbdedf8d8c626446d950afe7101a231e53834403da61b893b",
+				"dweb:/ipfs/QmSQ39F6wkELvcy1xj7p38KjMjwS8xoTY4bjx5yzkTgsoc"
 			]
 		}
 	},

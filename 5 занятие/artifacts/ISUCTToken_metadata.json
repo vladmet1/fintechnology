@@ -9,6 +9,67 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "emissionCenter",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "_approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "_transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "owner",
 						"type": "address"
 					},
@@ -33,7 +94,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "sender",
+						"name": "spender",
 						"type": "address"
 					},
 					{
@@ -67,6 +128,19 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "OWNER",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -137,6 +211,81 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -152,7 +301,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"scripts/IERC20.sol": "IERC20"
+			"5 занятие/ISUCTToken.sol": "ISUCTToken"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -166,12 +315,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"scripts/IERC20.sol": {
+		"5 занятие/IERC20.sol": {
 			"keccak256": "0x1ad02288eef1ab7ffc5b42ae82aee71e1d7887062dc17a70adc6cc732da4c9d7",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://825d24ebda7976b576e2bc3748d73b0e05e95f09bc73af090f26e9fd33bd5c22",
 				"dweb:/ipfs/QmZPhEbKTy4TgwhXFLbBSiFbb9q5mQHvFDcAzWaJCAUrDd"
+			]
+		},
+		"5 занятие/ISUCTToken.sol": {
+			"keccak256": "0xdbc4efe8e406daaa3f4f3657279dd0e59ea36adbd4caf9fb3e96d0418841a375",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ed204c62759119dbdedf8d8c626446d950afe7101a231e53834403da61b893b",
+				"dweb:/ipfs/QmSQ39F6wkELvcy1xj7p38KjMjwS8xoTY4bjx5yzkTgsoc"
 			]
 		}
 	},
