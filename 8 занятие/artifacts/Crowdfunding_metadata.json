@@ -1,0 +1,203 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "goal",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fundingPeriodInDays",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "product1",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "product1Price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "product2",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "product2Price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalFunds",
+						"type": "uint256"
+					}
+				],
+				"name": "CampaignSuccessful",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "contributor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "ContributionReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "contributor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "RefundIssued",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "newProductName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newProductPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "AddNewProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "FundProduct1",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "FundProduct2",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Crowdfunding.Products",
+						"name": "selectedProduct",
+						"type": "uint8"
+					}
+				],
+				"name": "FundWithIfElse",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "GetFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "WithDraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"8 занятие/Crowdfunding.sol": "Crowdfunding"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"8 занятие/Crowdfunding.sol": {
+			"keccak256": "0x501bad4a09cf881708d4602a07a2b4dd2f22fc511fb4c7fd14a745acf08ac438",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://56477b5aff615ed64d2a6048aec24daebded2ef2c14e257f5e265fe75a44789b",
+				"dweb:/ipfs/QmaWGPpf8yFZhFMRYNa1HVuzETyiwKA3h63YKU2VUTJ663"
+			]
+		}
+	},
+	"version": 1
+}
