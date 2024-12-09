@@ -16,7 +16,7 @@ contract Bonds {
     bool public isIssued; // Выпущена?
 
     mapping(address => uint256) private bondHolders; // Связывает адрес инвестора с количеством купленных облигаций
-    mapping(address => bool) private hasInvested; // Уже инвестор?
+    mapping(address => bool) private  hasInvested; // Уже инвестор?
 
     address[] private investors; // Список инвесторов
     uint256 private totalInvestors; // Общее количество инвесторов
@@ -83,6 +83,14 @@ contract Bonds {
         totalInvested += msg.value;
 
         emit BondsPurchased(msg.sender, amount);
+    }
+
+    // Позволяет эмитенту выводить все средства со счёта контракта, до наступления даты погашения*
+    function withdrawFundsBeforeMaturity() external onlyIssuer onlyBeforeMaturity {
+        uint256 contractBalance = address(this).balance;
+        require(contractBalance > 0, "No funds available to withdraw.");
+
+        payable(issuer).transfer(contractBalance);
     }
 
     // Позволяет эмитенту узнать общую сумму выплат инвесторам после наступления даты погашения*
